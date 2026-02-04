@@ -2,17 +2,19 @@
 
 [中文README](README_CN.md) | [English Notes](https://zhihangliu.cn/Renormalization-Group/en/) | [中文笔记合集](https://zhihangliu.cn/Renormalization-Group/)
 
-![Renormalization Group](docs/cn/assets/images/logo.png)
+<p align="center">
+  <img src="docs/cn/assets/images/logo.png" alt="Renormalization Group" width="400">
+</p>
 
 This repository contains self-study notes on **Renormalization Group (RG)** theory, covering critical phenomena, phase transitions, scaling laws, and universality classes. Notes are organized as articles with accompanying [Python code](https://github.com/Liu-Zhihang/Renormalization-Group/tree/main/code) for deeper understanding.
 
 ## Course Overview
 
-The renormalization group is one of the most profound ideas in theoretical physics. It answers a core question: **Why do systems with vastly different microscopic details exhibit the same macroscopic behavior near critical points?**
+The renormalization group was born from puzzles over divergent integrals and critical phenomena, yet within half a century it has evolved into a general language for understanding nature. From fundamental particle interactions to starlings swirling in the sky, from layer-by-layer weights in neural networks to fluctuations in Earth's climate, RG thinking pervades the study of multi-scale complex systems. Macroscopic laws are not simple superpositions of microscopic rules, but emergent products of scale transformations. Through RG, we gain insight into why vastly different systems share the same behavioral principles and how to extract the factors governing the whole from a welter of details.
 
-Through "coarse-graining"—progressively eliminating short-range degrees of freedom while retaining long-range effective interactions—RG reveals how different microscopic systems "flow" to the same fixed point under scale transformations, thereby sharing identical critical exponents. This **universality** is one of nature's most profound simplification principles.
+The common challenge of these multi-scale systems is this: when the correlation length tends to diverge, the traditional "separation of scales" assumption completely breaks down—local fluctuations no longer cancel out, but are amplified layer by layer through long-range correlations, coupling directly to macroscopic observables. Facing strong correlations among $10^{23}$ degrees of freedom, the **Renormalization Group** adopts a "divide and conquer" strategy: progressively reducing short-range degrees of freedom, tracking how system parameters "flow" with observation scale, and ultimately converging to fixed points that govern macroscopic behavior.
 
-This tutorial series starts from statistical mechanics foundations, progressively builds the quantitative language of critical phenomena, and ultimately delves into field-theoretic renormalization group and modern frontier applications.
+It is precisely this flow that explains the origin of **universality**—why systems with vastly different microscopic mechanisms share the same critical exponents. Kenneth Wilson received the 1982 Nobel Prize in Physics for developing this theory. This tutorial series starts from the physical picture of critical phenomena, establishes statistical mechanics foundations, introduces the quantitative language of scaling laws and critical exponents, and ultimately delves into field-theoretic renormalization group and modern frontier applications.
 
 ## Completed Notes
 
