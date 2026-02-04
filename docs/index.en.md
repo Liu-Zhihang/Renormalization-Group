@@ -22,6 +22,50 @@ It is precisely this flow that explains the origin of **universality**—why sys
 - [4. Phase Transitions and Critical Exponents: Scaling Laws and Universality Classes (Part I)](en/4.%20Phase%20Transitions%20and%20Critical%20Exponents%20-%20Scaling%20Laws%20and%20Universality%20Classes%20%28Part%20I%29.md)
 - [5. Phase Transitions and Critical Exponents: Scaling Laws and Universality Classes (Part II)](en/5.%20Phase%20Transitions%20and%20Critical%20Exponents%20-%20Scaling%20Laws%20and%20Universality%20Classes%20%28Part%20II%29.md)
 
+## Planned Topics
+
+**Part 1: Motivation, Statistical Physics, and Critical Phenomena** (In Progress)
+
+- Landau Theory and Ginzburg Criterion—Success and Failure of Mean Field
+- The World of the Ising Model—From 1D Exact Solution to 2D Critical Point
+- Block Spins and Coarse-Graining—Kadanoff's Intuitive RG Picture
+
+**Part 2: Real-Space RG and Numerical Methods**
+
+- Real-Space RG Recursion Relations—Relevant Dimensions and Phase Diagrams
+- Finite-Size Scaling and Data Collapse
+- Monte Carlo Simulation of the Ising Model—From Metropolis to Cluster Algorithms
+- Monte Carlo RG—Constructing RG Transformations from Numerical Data
+- Ginzburg-Landau Functional and Continuum Field Description
+- From Lattice Ising to φ⁴ Field Theory
+
+**Part 3: Field-Theoretic RG and Quantum Field Theory**
+
+- Path Integrals and Gaussian Fields—From Harmonic Oscillator to Free Scalar Field
+- φ⁴ Theory and Feynman Diagrams—Where Do Divergences Come From?
+- Renormalization Techniques—Regularization, Counterterms, and Physical Parameters
+- Callan-Symanzik Equation and β Function
+- Wilson's Perspective on RG—"Integrating Out High-Momentum Modes"
+- ε Expansion and Wilson-Fisher Fixed Point
+- RG in Quantum Field Theory—QED, QCD, and Asymptotic Freedom
+- Non-Perturbative RG—Functional RG and Large-N Techniques
+
+**Part 4: Tensor Networks, DMRG, Complex Networks, and Non-Equilibrium RG**
+
+- Density Matrix Renormalization Group (DMRG) and Matrix Product States (MPS)
+- Tensor Networks and Multi-Scale Entanglement Renormalization (MERA, TNR)
+- RG on Networks and Graphs—From Laplacian RG to Network RG
+- RG in Non-Equilibrium Systems and Active Matter
+- Quantum Gravity, Asymptotic Safety, and Holographic RG
+
+**Part 5: RG × Machine Learning & Interdisciplinary Frontiers**
+
+- RG, Information Theory, and Parameter Compression—From Fisher Information to "Emergent Theory"
+- Deep Learning and Variational RG—RBM, Neural RG, and Mutual Information RG
+- Learning RG with Deep Learning—FRG+NN, Neural Tensor Network, etc.
+- New Directions for RG in Complex Systems and Interdisciplinary Research
+- Frontier Paper Reviews (Throughout the Tutorial)
+
 ## Code Demonstrations
 
 **[Lecture 2: Why Do We Need the Renormalization Group](en/2.%20Why%20Do%20We%20Need%20the%20Renormalization%20Group.md)**
