@@ -1,6 +1,6 @@
 # Renormalization Group
 
-![Renormalization Group](cn/assets/images/logo.png
+![Renormalization Group](cn/assets/images/logo.png)
 
 These are self-study notes on **Renormalization Group (RG)** theory, covering critical phenomena, phase transitions, scaling laws, and universality classes. Notes are organized as articles with accompanying [Python code](https://github.com/Liu-Zhihang/Renormalization-Group/tree/main/code) for deeper understanding.
 

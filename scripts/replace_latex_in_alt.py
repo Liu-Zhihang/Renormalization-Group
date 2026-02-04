@@ -112,9 +112,8 @@ def replace_latex_in_alt_text(content):
     """Replace LaTeX in image alt text only, preserving body text."""
     
     def process_alt(match):
-        full_match = match.group(0)
         alt_text = match.group(1)
-        rest = match.group(2)
+        path = match.group(2)
         
         # Apply all LaTeX replacements to alt text
         new_alt = alt_text
@@ -124,13 +123,14 @@ def replace_latex_in_alt_text(content):
         # Remove remaining $ signs
         new_alt = new_alt.replace('$', '')
         
-        return f'![{new_alt}]({rest}'
+        # Return complete image syntax with closing paren
+        return f'![{new_alt}]({path})'
     
-    # Match image syntax: ![alt text](path
-    # Use non-greedy match for alt text
+    # Match image syntax: ![alt text](path)
+    # Handle multiline alt text with DOTALL flag
     pattern = r'!\[((?:[^\[\]]|\[(?:[^\[\]]|\[[^\[\]]*\])*\])*)\]\(([^)]+)\)'
     
-    return re.sub(pattern, process_alt, content)
+    return re.sub(pattern, process_alt, content, flags=re.DOTALL)
 
 
 def process_file(filepath):
