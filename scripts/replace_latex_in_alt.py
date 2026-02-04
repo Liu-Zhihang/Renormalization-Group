@@ -5,107 +5,141 @@ This is needed because glightbox captions don't render LaTeX.
 """
 
 import re
-import os
 from pathlib import Path
 
-# LaTeX to Unicode replacement rules
-LATEX_REPLACEMENTS = [
-    # Greek letters
-    (r'\$\\alpha\$', 'α'),
-    (r'\$\\beta\$', 'β'),
-    (r'\$\\gamma\$', 'γ'),
-    (r'\$\\delta\$', 'δ'),
-    (r'\$\\epsilon\$', 'ε'),
-    (r'\$\\zeta\$', 'ζ'),
-    (r'\$\\eta\$', 'η'),
-    (r'\$\\theta\$', 'θ'),
-    (r'\$\\lambda\$', 'λ'),
-    (r'\$\\mu\$', 'μ'),
-    (r'\$\\nu\$', 'ν'),
-    (r'\$\\xi\$', 'ξ'),
-    (r'\$\\pi\$', 'π'),
-    (r'\$\\rho\$', 'ρ'),
-    (r'\$\\sigma\$', 'σ'),
-    (r'\$\\tau\$', 'τ'),
-    (r'\$\\phi\$', 'φ'),
-    (r'\$\\chi\$', 'χ'),
-    (r'\$\\psi\$', 'ψ'),
-    (r'\$\\omega\$', 'ω'),
-    (r'\$\\Gamma\$', 'Γ'),
-    (r'\$\\Delta\$', 'Δ'),
-    (r'\$\\Theta\$', 'Θ'),
-    (r'\$\\Lambda\$', 'Λ'),
-    (r'\$\\Xi\$', 'Ξ'),
-    (r'\$\\Pi\$', 'Π'),
-    (r'\$\\Sigma\$', 'Σ'),
-    (r'\$\\Phi\$', 'Φ'),
-    (r'\$\\Psi\$', 'Ψ'),
-    (r'\$\\Omega\$', 'Ω'),
-    
-    # Subscripts
-    (r'_\{c\}', 'c'),
-    (r'_c', 'c'),
-    (r'_0', '₀'),
-    (r'_1', '₁'),
-    (r'_2', '₂'),
-    (r'_\{0\}', '₀'),
-    (r'_\{1\}', '₁'),
-    (r'_\{2\}', '₂'),
-    (r'_V', 'V'),
-    
-    # Superscripts
-    (r'\^\{-1\}', '⁻¹'),
-    (r'\^\{-2\}', '⁻²'),
-    (r'\^2', '²'),
-    (r'\^\{2\}', '²'),
-    (r'\^3', '³'),
-    (r'\^\{3\}', '³'),
-    (r'\^\*', '*'),
-    
+# LaTeX command to Unicode mapping (without $ wrapping)
+LATEX_COMMANDS = {
+    # Greek letters (lowercase)
+    r'\\alpha': 'α',
+    r'\\beta': 'β',
+    r'\\gamma': 'γ',
+    r'\\delta': 'δ',
+    r'\\epsilon': 'ε',
+    r'\\varepsilon': 'ε',
+    r'\\zeta': 'ζ',
+    r'\\eta': 'η',
+    r'\\theta': 'θ',
+    r'\\vartheta': 'ϑ',
+    r'\\iota': 'ι',
+    r'\\kappa': 'κ',
+    r'\\lambda': 'λ',
+    r'\\mu': 'μ',
+    r'\\nu': 'ν',
+    r'\\xi': 'ξ',
+    r'\\pi': 'π',
+    r'\\rho': 'ρ',
+    r'\\sigma': 'σ',
+    r'\\tau': 'τ',
+    r'\\upsilon': 'υ',
+    r'\\phi': 'φ',
+    r'\\varphi': 'φ',
+    r'\\chi': 'χ',
+    r'\\psi': 'ψ',
+    r'\\omega': 'ω',
+    # Greek letters (uppercase)
+    r'\\Gamma': 'Γ',
+    r'\\Delta': 'Δ',
+    r'\\Theta': 'Θ',
+    r'\\Lambda': 'Λ',
+    r'\\Xi': 'Ξ',
+    r'\\Pi': 'Π',
+    r'\\Sigma': 'Σ',
+    r'\\Upsilon': 'Υ',
+    r'\\Phi': 'Φ',
+    r'\\Psi': 'Ψ',
+    r'\\Omega': 'Ω',
     # Operators and symbols
-    (r'\\to', '→'),
-    (r'\\rightarrow', '→'),
-    (r'\\leftarrow', '←'),
-    (r'\\leftrightarrow', '↔'),
-    (r'\\infty', '∞'),
-    (r'\\approx', '≈'),
-    (r'\\sim', '~'),
-    (r'\\times', '×'),
-    (r'\\cdot', '·'),
-    (r'\\pm', '±'),
-    (r'\\mp', '∓'),
-    (r'\\leq', '≤'),
-    (r'\\geq', '≥'),
-    (r'\\neq', '≠'),
-    (r'\\partial', '∂'),
-    (r'\\nabla', '∇'),
-    (r'\\sum', 'Σ'),
-    (r'\\prod', 'Π'),
-    (r'\\int', '∫'),
+    r'\\to': '→',
+    r'\\rightarrow': '→',
+    r'\\leftarrow': '←',
+    r'\\leftrightarrow': '↔',
+    r'\\Rightarrow': '⇒',
+    r'\\Leftarrow': '⇐',
+    r'\\infty': '∞',
+    r'\\approx': '≈',
+    r'\\sim': '~',
+    r'\\simeq': '≃',
+    r'\\equiv': '≡',
+    r'\\neq': '≠',
+    r'\\leq': '≤',
+    r'\\geq': '≥',
+    r'\\ll': '≪',
+    r'\\gg': '≫',
+    r'\\times': '×',
+    r'\\cdot': '·',
+    r'\\pm': '±',
+    r'\\mp': '∓',
+    r'\\partial': '∂',
+    r'\\nabla': '∇',
+    r'\\sum': 'Σ',
+    r'\\prod': 'Π',
+    r'\\int': '∫',
+    r'\\propto': '∝',
+    r'\\subset': '⊂',
+    r'\\supset': '⊃',
+    r'\\in': '∈',
+    r'\\forall': '∀',
+    r'\\exists': '∃',
+    r'\\langle': '⟨',
+    r'\\rangle': '⟩',
+    r'\\sqrt': '√',
+    r'\\prime': '′',
+    # Special
+    r'\\bar': '',  # Will handle separately
+    r'\\hat': '',
+    r'\\tilde': '',
+    r'\\vec': '',
+    r'\\overline': '',
+}
+
+# Superscripts and subscripts
+SUPERSCRIPTS = {
+    '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴',
+    '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹',
+    '+': '⁺', '-': '⁻', '=': '⁼', '(': '⁽', ')': '⁾',
+    'n': 'ⁿ', 'i': 'ⁱ',
+}
+
+SUBSCRIPTS = {
+    '0': '₀', '1': '₁', '2': '₂', '3': '₃', '4': '₄',
+    '5': '₅', '6': '₆', '7': '₇', '8': '₈', '9': '₉',
+    '+': '₊', '-': '₋', '=': '₌', '(': '₍', ')': '₎',
+    'a': 'ₐ', 'e': 'ₑ', 'o': 'ₒ', 'x': 'ₓ',
+    'h': 'ₕ', 'k': 'ₖ', 'l': 'ₗ', 'm': 'ₘ', 'n': 'ₙ',
+    'p': 'ₚ', 's': 'ₛ', 't': 'ₜ',
+}
+
+
+def replace_latex_in_text(text):
+    """Replace all LaTeX commands in text with Unicode."""
+    result = text
     
-    # Common patterns
-    (r'\\bar\{c\}', 'c̄'),
-    (r'\\bar\{T\}', 'T̄'),
-    (r'\\bar\{\\nu\}', 'ν̄'),
-    (r'\\tilde\{', ''),
-    (r'\\hat\{', ''),
-    (r'\\vec\{', ''),
-    (r'\\mathbb\{Z\}', 'ℤ'),
-    (r'\\mathbb\{R\}', 'ℝ'),
+    # Replace LaTeX commands
+    for latex, unicode_char in LATEX_COMMANDS.items():
+        result = re.sub(latex, unicode_char, result)
     
-    # Fractions (simplified)
-    (r'\\frac\{1\}\{2\}', '1/2'),
-    (r'\\frac\{1\}\{3\}', '1/3'),
-    (r'\\frac\{1\}\{4\}', '1/4'),
+    # Handle superscripts: ^{...} or ^x
+    def replace_superscript(m):
+        content = m.group(1) if m.group(1) else m.group(2)
+        return ''.join(SUPERSCRIPTS.get(c, c) for c in content)
+    result = re.sub(r'\^\{([^}]+)\}|\^([0-9a-zA-Z+-])', replace_superscript, result)
     
-    # Text commands
-    (r'\\text\{', ''),
-    (r'\\mathrm\{', ''),
+    # Handle subscripts: _{...} or _x
+    def replace_subscript(m):
+        content = m.group(1) if m.group(1) else m.group(2)
+        return ''.join(SUBSCRIPTS.get(c, c) for c in content)
+    result = re.sub(r'_\{([^}]+)\}|_([0-9a-zA-Z])', replace_subscript, result)
     
-    # Clean up remaining braces
-    (r'\{', ''),
-    (r'\}', ''),
-]
+    # Remove remaining braces
+    result = re.sub(r'\{([^}]*)\}', r'\1', result)
+    
+    # Remove $ signs
+    result = result.replace('$', '')
+    
+    # Clean up extra backslashes
+    result = re.sub(r'\\([a-zA-Z]+)', r'\1', result)  # Remove remaining \commands
+    
+    return result
 
 
 def replace_latex_in_alt_text(content):
@@ -115,13 +149,8 @@ def replace_latex_in_alt_text(content):
         alt_text = match.group(1)
         path = match.group(2)
         
-        # Apply all LaTeX replacements to alt text
-        new_alt = alt_text
-        for pattern, replacement in LATEX_REPLACEMENTS:
-            new_alt = re.sub(pattern, replacement, new_alt)
-        
-        # Remove remaining $ signs
-        new_alt = new_alt.replace('$', '')
+        # Apply LaTeX replacements to alt text
+        new_alt = replace_latex_in_text(alt_text)
         
         # Return complete image syntax with closing paren
         return f'![{new_alt}]({path})'
@@ -135,7 +164,7 @@ def replace_latex_in_alt_text(content):
 
 def process_file(filepath):
     """Process a single markdown file."""
-    print(f"Processing: {filepath}")
+    print(f"Processing: {filepath.name}")
     
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -145,19 +174,17 @@ def process_file(filepath):
     if content != new_content:
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(new_content)
-        print(f"  Updated: {filepath}")
+        print(f"  Updated: {filepath.name}")
         return True
     else:
-        print(f"  No changes: {filepath}")
+        print(f"  No changes: {filepath.name}")
         return False
 
 
 def main():
-    # Get the docs directory
     script_dir = Path(__file__).parent
     docs_dir = script_dir.parent / 'docs'
     
-    # Find all markdown files
     md_files = list(docs_dir.glob('**/*.md'))
     
     updated_count = 0
