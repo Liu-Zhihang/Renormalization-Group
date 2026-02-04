@@ -85,25 +85,19 @@
 
 **[第3讲：统计力学回顾——配分函数、自由能与涨落](docs/cn/3.统计力学回顾：配分函数、自由能与涨落.md)**
 
-| 自由能景观 | 临界分形结构 |
-|:---:|:---:|
-| ![Free Energy](docs/cn/assets/images/03_009_6747cc3f-112f-417b-baad-96162266f939.png) | ![Fractal](docs/cn/assets/images/03_010_052cde74-62ca-4229-b4e7-2b37f9713be8.png) |
+| 能量-熵权衡 | 自由能景观 | 特征重要性 |
+|:---:|:---:|:---:|
+| ![Energy-Entropy](docs/cn/assets/images/03_013_61356d55-a582-4d0d-9573-1fe7b8951f6f.png) | ![Free Energy](docs/cn/assets/images/03_014_32518e6d-8931-4aa3-8f92-18d0a8a81d5d.png) | ![Features](docs/cn/assets/images/03_015_5840452a-3546-4405-9788-9487a0caef94.png) |
 
-*左：一维 Ising 模型热力学；右：临界点的尺度不变分形结构*
+*TERP 可解释 AI：用热力学自由能思想寻找最优解释——能量-熵权衡、自由能景观与关键特征排序*
 
 **[第5讲：相变与临界指数——标度律与普适类（下）](docs/cn/5.相变与临界指数：标度律与普适类（下）.md)**
 
-| 3D 渗流相变动画 |
-|:---:|
-| ![Percolation](docs/cn/assets/images/640.gif) |
-
-*3D Site Percolation：随着占据概率 p 增加，团簇从孤立小点演化为贯穿系统的宏观网络*
-
-| 有限尺寸标度分析 | 数据塌缩验证普适性 |
+| 3D 渗流相变动画 | 有限尺寸标度分析 |
 |:---:|:---:|
-| ![FSS](docs/cn/assets/images/05_008_fc7d2fda-9a45-4db9-a7f7-56fe92cc5ba2.png) | ![Collapse](docs/cn/assets/images/05_006_ca25362d-8001-4e29-b7f4-d843b9c12158.png) |
+| ![Percolation](docs/cn/assets/images/640.gif) | ![FSS](docs/cn/assets/images/05_008_fc7d2fda-9a45-4db9-a7f7-56fe92cc5ba2.png) |
 
-*左：序参量和磁化率的有限尺寸标度分析；右：使用3D渗流临界指数成功实现数据塌缩*
+*左：3D Site Percolation 团簇演化动画；右：序参量和磁化率的有限尺寸标度分析*
 
 
 ## 许可证

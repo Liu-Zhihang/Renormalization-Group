@@ -48,3 +48,7 @@ list_of_videos.md
 docs/cn/assets/images/download_images.py
 docs/cn/assets/images/download_log.json
 docs/cn/assets/images/replace_image_urls.py
+
+# Scripts
+scripts/
+

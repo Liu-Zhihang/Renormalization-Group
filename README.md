@@ -85,25 +85,19 @@ Code Output Demonstrations:
 
 **[Lecture 3: Statistical Mechanics Review—Partition Function, Free Energy, and Fluctuations](docs/en/3.%20Statistical%20Mechanics%20Review%20-%20Partition%20Function%2C%20Free%20Energy%2C%20and%20Fluctuations.md)**
 
-| Free Energy Landscape | Critical Fractal Structure |
-|:---:|:---:|
-| ![Free Energy](docs/cn/assets/images/03_009_6747cc3f-112f-417b-baad-96162266f939.png) | ![Fractal](docs/cn/assets/images/03_010_052cde74-62ca-4229-b4e7-2b37f9713be8.png) |
+| Energy-Entropy Trade-off | Free Energy Landscape | Feature Importance |
+|:---:|:---:|:---:|
+| ![Energy-Entropy](docs/cn/assets/images/03_013_61356d55-a582-4d0d-9573-1fe7b8951f6f.png) | ![Free Energy](docs/cn/assets/images/03_014_32518e6d-8931-4aa3-8f92-18d0a8a81d5d.png) | ![Features](docs/cn/assets/images/03_015_5840452a-3546-4405-9788-9487a0caef94.png) |
 
-*Left: 1D Ising model thermodynamics; Right: Scale-invariant fractal structure at the critical point*
+*TERP Explainable AI: Using thermodynamic free energy principles to find optimal explanations—energy-entropy trade-off, free energy landscape, and key feature ranking*
 
 **[Lecture 5: Phase Transitions and Critical Exponents—Scaling Laws and Universality Classes (Part II)](docs/en/5.%20Phase%20Transitions%20and%20Critical%20Exponents%20-%20Scaling%20Laws%20and%20Universality%20Classes%20%28Part%20II%29.md)**
 
-| 3D Percolation Phase Transition Animation |
-|:---:|
-| ![Percolation](docs/cn/assets/images/640.gif) |
-
-*3D Site Percolation: As occupation probability p increases, clusters evolve from isolated small dots to a macroscopic network spanning the system*
-
-| Finite-Size Scaling Analysis | Data Collapse Verifying Universality |
+| 3D Percolation Animation | Finite-Size Scaling Analysis |
 |:---:|:---:|
-| ![FSS](docs/cn/assets/images/05_008_fc7d2fda-9a45-4db9-a7f7-56fe92cc5ba2.png) | ![Collapse](docs/cn/assets/images/05_006_ca25362d-8001-4e29-b7f4-d843b9c12158.png) |
+| ![Percolation](docs/cn/assets/images/640.gif) | ![FSS](docs/cn/assets/images/05_008_fc7d2fda-9a45-4db9-a7f7-56fe92cc5ba2.png) |
 
-*Left: Finite-size scaling analysis of order parameter and susceptibility; Right: Successful data collapse using 3D percolation critical exponents*
+*Left: 3D Site Percolation cluster evolution animation; Right: Finite-size scaling analysis of order parameter and susceptibility*
 
 
 ## License
