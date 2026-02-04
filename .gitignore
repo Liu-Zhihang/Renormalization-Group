@@ -1,0 +1,50 @@
+# MkDocs build output
+site/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.ipynb_checkpoints
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# Logs and temp files
+*.log
+mkdocs-serve-*.log
+*.tmp
+*.bak
+*~
+
+# Images folder (except docs assets)
+images/
+!docs/assets/images/
+!docs/cn/assets/images/
+
+# Other
+requirements.md
+TERMS.yml
+list_of_videos.md
+
+# Image download scripts and logs
+docs/cn/assets/images/download_images.py
+docs/cn/assets/images/download_log.json
+docs/cn/assets/images/replace_image_urls.py
