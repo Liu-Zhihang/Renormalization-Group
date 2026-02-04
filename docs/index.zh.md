@@ -1,6 +1,6 @@
-<p align="center">
-  <img src="cn/assets/images/logo.png" alt="重整化群" width="400">
-</p>
+<figure markdown="span">
+  ![重整化群](cn/assets/images/logo.png){ width="400" }
+</figure>
 
 这是**重整化群（Renormalization Group, RG）**理论的自学笔记，涵盖临界现象、相变、标度律与普适类等内容。笔记以文章形式整理，并配有 [Python 代码](https://github.com/Liu-Zhihang/Renormalization-Group/tree/main/code) 以加深理解。
 
