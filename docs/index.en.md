@@ -1,18 +1,59 @@
 # Renormalization Group
 
-These are self-study notes on **Renormalization Group** theory. To document my learning process, I've structured the notes into articles and written [Python code](https://github.com/Liu-Zhihang/Renormalization-Group/tree/main/code) to deepen my understanding.
+![Renormalization Group](cn/assets/images/logo.png
+
+These are self-study notes on **Renormalization Group (RG)** theory, covering critical phenomena, phase transitions, scaling laws, and universality classes. Notes are organized as articles with accompanying [Python code](https://github.com/Liu-Zhihang/Renormalization-Group/tree/main/code) for deeper understanding.
 
 ## Course Overview
 
-Renormalization Group (RG) provides a systematic framework to understand how physical laws change with scale—from critical phenomena and phase transitions to quantum field theory. These notes cover motivation, statistical mechanics foundations, critical exponents, and scaling laws.
+The renormalization group is one of the most profound ideas in theoretical physics. It answers a core question: **Why do systems with vastly different microscopic details exhibit the same macroscopic behavior near critical points?**
 
-## Course Notes
+Through "coarse-graining"—progressively eliminating short-range degrees of freedom while retaining long-range effective interactions—RG reveals how different microscopic systems "flow" to the same fixed point under scale transformations, thereby sharing identical critical exponents. This **universality** is one of nature's most profound simplification principles.
 
-- 1\. What Is the Renormalization Group
-- 2\. Why We Need the Renormalization Group (to be translated)
-- 3\. Statistical Mechanics Review - Partition Function, Free Energy and Fluctuations (to be translated)
-- 4\. Phase Transitions and Critical Exponents - Scaling Laws and Universality (Part 1) (to be translated)
-- 5\. Phase Transitions and Critical Exponents - Scaling Laws and Universality (Part 2) (to be translated)
+This tutorial series starts from statistical mechanics foundations, progressively builds the quantitative language of critical phenomena, and ultimately delves into field-theoretic renormalization group and modern frontier applications.
+
+## Completed Notes
+
+### Part 1: Motivation, Statistical Physics, and Critical Phenomena
+
+- [1. What Is the Renormalization Group](en/1.%20What%20Is%20the%20Renormalization%20Group.md)
+- [2. Why Do We Need the Renormalization Group](en/2.%20Why%20Do%20We%20Need%20the%20Renormalization%20Group.md)
+- [3. Statistical Mechanics Review: Partition Function, Free Energy, and Fluctuations](en/3.%20Statistical%20Mechanics%20Review%20-%20Partition%20Function%2C%20Free%20Energy%2C%20and%20Fluctuations.md)
+- [4. Phase Transitions and Critical Exponents: Scaling Laws and Universality Classes (Part I)](en/4.%20Phase%20Transitions%20and%20Critical%20Exponents%20-%20Scaling%20Laws%20and%20Universality%20Classes%20%28Part%20I%29.md)
+- [5. Phase Transitions and Critical Exponents: Scaling Laws and Universality Classes (Part II)](en/5.%20Phase%20Transitions%20and%20Critical%20Exponents%20-%20Scaling%20Laws%20and%20Universality%20Classes%20%28Part%20II%29.md)
+
+## Code Demonstrations
+
+**[Lecture 2: Why Do We Need the Renormalization Group](en/2.%20Why%20Do%20We%20Need%20the%20Renormalization%20Group.md)**
+
+| Real-Space Renormalization Group Flow |
+|:---:|
+| ![RG Flow](cn/assets/images/02_001_0bd1b135-4629-48b8-8c04-0c6c07d7fa85.png |
+
+*Kadanoff block spin coarse-graining: 128×128 → 64×64 → 32×32, microscopic fluctuations fade away as macroscopic order emerges*
+
+**[Lecture 3: Statistical Mechanics Review—Partition Function, Free Energy, and Fluctuations](en/3.%20Statistical%20Mechanics%20Review%20-%20Partition%20Function%2C%20Free%20Energy%2C%20and%20Fluctuations.md)**
+
+| Free Energy Landscape | Critical Fractal Structure |
+|:---:|:---:|
+| ![Free Energy](cn/assets/images/03_009_6747cc3f-112f-417b-baad-96162266f939.png | ![Fractal](cn/assets/images/03_010_052cde74-62ca-4229-b4e7-2b37f9713be8.png |
+
+*Left: 1D Ising model thermodynamics; Right: Scale-invariant fractal structure at the critical point*
+
+**[Lecture 5: Phase Transitions and Critical Exponents—Scaling Laws and Universality Classes (Part II)](en/5.%20Phase%20Transitions%20and%20Critical%20Exponents%20-%20Scaling%20Laws%20and%20Universality%20Classes%20%28Part%20II%29.md)**
+
+| 3D Percolation Phase Transition |
+|:---:|
+| ![Percolation](cn/assets/images/640.gif |
+
+*3D Site Percolation: As occupation probability p increases, clusters evolve from isolated dots to a macroscopic spanning network*
+
+| Finite-Size Scaling Analysis | Data Collapse Verifying Universality |
+|:---:|:---:|
+| ![FSS](cn/assets/images/05_008_fc7d2fda-9a45-4db9-a7f7-56fe92cc5ba2.png | ![Collapse](cn/assets/images/05_006_ca25362d-8001-4e29-b7f4-d843b9c12158.png |
+
+*Left: Order parameter and susceptibility scaling; Right: Successful data collapse using 3D percolation critical exponents*
+
 
 ## License
 

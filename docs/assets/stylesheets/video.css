@@ -22,10 +22,24 @@ video {
   height: 100%;
 }
 
-img {
+/* 图片居中显示 */
+.md-content img:not(.twemoji):not(.emoji) {
   max-width: 100%;
   height: auto;
   border-radius: 4px;
+  display: block;
+  margin: 1rem auto;
+}
+
+.md-content p > img {
+  display: block;
+  margin: 1rem auto;
+}
+
+article img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 table img {
@@ -36,4 +50,26 @@ table img {
 img[src$=".gif"] {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 长图注样式 - 允许换行和滚动 */
+.glightbox-container .gslide-description {
+  max-height: 40vh;
+  overflow-y: auto;
+  padding: 1rem 2rem;
+}
+
+.glightbox-container .gdesc-inner {
+  max-width: 90vw;
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.glightbox-container .gslide-title {
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: justify;
+  max-width: 90vw;
 }

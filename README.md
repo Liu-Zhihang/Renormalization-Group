@@ -77,19 +77,19 @@ Code Output Demonstrations:
 
 **[Lecture 2: Why Do We Need the Renormalization Group](docs/en/2.%20Why%20Do%20We%20Need%20the%20Renormalization%20Group.md)**
 
-| 2D Ising Model Critical Phenomena |
+| Real-Space Renormalization Group Flow |
 |:---:|
-| ![2D Ising](docs/cn/assets/images/02_004_f0635ec7-cbcb-4d52-b32e-00add981f03e.jpg) |
+| ![RG Flow](docs/cn/assets/images/02_001_0bd1b135-4629-48b8-8c04-0c6c07d7fa85.png) |
 
-*2D Ising model configurations at different temperatures: high-temperature disordered state, fractal clusters near critical point, low-temperature ordered state*
+*Kadanoff block spin coarse-graining: 128×128 → 64×64 → 32×32, microscopic fluctuations fade away as macroscopic order emerges*
 
 **[Lecture 3: Statistical Mechanics Review—Partition Function, Free Energy, and Fluctuations](docs/en/3.%20Statistical%20Mechanics%20Review%20-%20Partition%20Function%2C%20Free%20Energy%2C%20and%20Fluctuations.md)**
 
-| Free Energy Landscape | Fluctuation-Dissipation Relation |
+| Free Energy Landscape | Critical Fractal Structure |
 |:---:|:---:|
-| ![Free Energy](docs/cn/assets/images/03_009_6747cc3f-112f-417b-baad-96162266f939.png) | ![Fluctuation](docs/cn/assets/images/03_010_052cde74-62ca-4229-b4e7-2b37f9713be8.png) |
+| ![Free Energy](docs/cn/assets/images/03_009_6747cc3f-112f-417b-baad-96162266f939.png) | ![Fractal](docs/cn/assets/images/03_010_052cde74-62ca-4229-b4e7-2b37f9713be8.png) |
 
-*Left: Free energy landscape at different temperatures showing symmetry breaking at phase transition; Right: Numerical verification of fluctuation-dissipation theorem*
+*Left: 1D Ising model thermodynamics; Right: Scale-invariant fractal structure at the critical point*
 
 **[Lecture 5: Phase Transitions and Critical Exponents—Scaling Laws and Universality Classes (Part II)](docs/en/5.%20Phase%20Transitions%20and%20Critical%20Exponents%20-%20Scaling%20Laws%20and%20Universality%20Classes%20%28Part%20II%29.md)**
 

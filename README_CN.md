@@ -77,25 +77,19 @@
 
 **[第2讲：为什么需要重整化群](docs/cn/2.为什么需要重整化群.md)**
 
-| 2D Ising 模型临界现象 |
+| 实空间重整化群流 |
 |:---:|
-| ![2D Ising](docs/cn/assets/images/02_004_f0635ec7-cbcb-4d52-b32e-00add981f03e.jpg) |
+| ![RG Flow](docs/cn/assets/images/02_001_0bd1b135-4629-48b8-8c04-0c6c07d7fa85.png) |
 
-*2D Ising 模型在不同温度下的构型：高温无序态、临界点附近的分形团簇、低温有序态*
+*Kadanoff 块自旋粗粒化：128×128 → 64×64 → 32×32，微观涨落逐步消失，宏观秩序涌现*
 
 **[第3讲：统计力学回顾——配分函数、自由能与涨落](docs/cn/3.统计力学回顾：配分函数、自由能与涨落.md)**
 
-| 自由能景观 | 涨落-耗散关系 |
+| 自由能景观 | 临界分形结构 |
 |:---:|:---:|
-| ![Free Energy](docs/cn/assets/images/03_009_6747cc3f-112f-417b-baad-96162266f939.png) | ![Fluctuation](docs/cn/assets/images/03_010_052cde74-62ca-4229-b4e7-2b37f9713be8.png) |
+| ![Free Energy](docs/cn/assets/images/03_009_6747cc3f-112f-417b-baad-96162266f939.png) | ![Fractal](docs/cn/assets/images/03_010_052cde74-62ca-4229-b4e7-2b37f9713be8.png) |
 
-*左：不同温度下的自由能景观，展示相变时对称性破缺；右：涨落-耗散定理的数值验证*
-
-**[第4讲：相变与临界指数——标度律与普适类（上）](docs/cn/4.相变与临界指数：标度律与普适类（上）.md)**
-
-| 序参量与响应函数 | 幂律分布与双对数图 |
-|:---:|:---:|
-| ![Order Parameter](docs/cn/assets/images/04_001_69ca0e9e-d7df-49ef-8901-c7c0a2f8c2ee.png) | ![Power Law](docs/cn/assets/images/04_002_88fc564e-4c7e-4568-9ef7-2cbd9d4248bc.png) |
+*左：一维 Ising 模型热力学；右：临界点的尺度不变分形结构*
 
 **[第5讲：相变与临界指数——标度律与普适类（下）](docs/cn/5.相变与临界指数：标度律与普适类（下）.md)**
 
