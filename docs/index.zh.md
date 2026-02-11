@@ -96,3 +96,17 @@
 ## 许可证
 
 本项目采用 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) 许可。
+
+## Citation
+
+如使用或参考本笔记，欢迎引用。BibTeX 格式如下：
+
+```bibtex
+@misc{liu2024renormalization,
+  author       = {Liu, Zhihang},
+  title        = {Renormalization Group: Notes and Codes},
+  year         = {2025},
+  url          = {https://github.com/Liu-Zhihang/Renormalization-Group},
+  note         = {Self-study notes on critical phenomena, phase transitions, scaling laws and universality classes}
+}
+```

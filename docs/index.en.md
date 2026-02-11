@@ -96,3 +96,17 @@ It is precisely this flow that explains the origin of **universality**—why sys
 ## License
 
 This project is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+## Citation
+
+If you use or reference these notes, we welcome a citation. BibTeX format:
+
+```bibtex
+@misc{liu2024renormalization,
+  author       = {Liu, Zhihang},
+  title        = {Renormalization Group: Notes and Codes},
+  year         = {2025},
+  url          = {https://github.com/Liu-Zhihang/Renormalization-Group},
+  note         = {Self-study notes on critical phenomena, phase transitions, scaling laws and universality classes}
+}
+```
