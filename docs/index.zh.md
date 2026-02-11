@@ -104,7 +104,7 @@
 ```bibtex
 @misc{liu2024renormalization,
   author       = {Liu, Zhihang},
-  title        = {Renormalization Group: Notes and Codes},
+  title        = {Renormalization Group},
   year         = {2025},
   url          = {https://github.com/Liu-Zhihang/Renormalization-Group},
   note         = {Self-study notes on critical phenomena, phase transitions, scaling laws and universality classes}
